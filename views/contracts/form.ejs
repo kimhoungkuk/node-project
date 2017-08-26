@@ -1,0 +1,21 @@
+<% include ../header.ejs %>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        <table class="table table-bordered">
+            <tr>
+                <th>제목</th>
+                <td><input type="text" name="title" class="form-control" value="<%=contracts.title%>"/></td>
+            </tr>
+            <tr>
+                <th>작성자</th>
+                <td><input type="text" name="write_name" class="form-control" value="<%=contracts.write_name%>"/></td>
+            </tr>
+            <tr>
+                <th>내용</th>
+                <td><input type="text" name="content" class="form-control" value="<%=contracts.content%>"/></td>
+            </tr>
+        </table>
+        <button class="btn btn-primary">작성하기</button>
+    </form>
+
+<% include ../footer.ejs %>

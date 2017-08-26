@@ -1,0 +1,33 @@
+<% include ../header.ejs %>
+
+<table class="table table-bordered table-hover"> 
+    <tr>
+        <th>제목</th>
+        <th>작성일</th>
+        <th>삭제</th>
+    </tr>
+    <% contracts.forEach( function(contracts){ 
+        //var date = new DAte( product.created_at);
+        //var month = date.getFullyear;    
+    %>
+    <tr>
+        <td>
+            <a href="/contracts/detail/<%=contracts.id%>">
+            <%=contracts.title%>
+            </a>
+        </td>
+        <td>
+            <%=contracts.getDate.year%> - 
+            <%=contracts.getDate.month%>  -
+            <%=contracts.getDate.day%> 
+        </td>
+        <td>
+            <a href="/contracts/delete/<%=contracts.id%>" class="btn btn-danger" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+        </td>       
+    </tr>  
+    <% }); %>
+</table>
+
+<a href="/contracts/write" class="btn btn-default">작성하기</a>
+
+<% include ../footer.ejs %>
